@@ -1,0 +1,15 @@
+@charset "UTF-8";
+$default_fontsize: 40px;
+$default_animate_time: 1s;
+@function pxToRem($n) {
+    @return ($n * 1px) / $default_fontsize * 1rem;
+}
+
+@function bgUnit($n) {
+    @return $n / $default_fontsize * 1rem;
+}
+@function unitCheck($sprite) {
+    @return bgUnit(nth($sprite, 1)) bgUnit(nth($sprite, 2)) bgUnit(nth($sprite, 3)) bgUnit(nth($sprite, 4));
+}
+
+html,body { padding: 0; margin: 0; }
